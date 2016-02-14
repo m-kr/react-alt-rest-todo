@@ -1,6 +1,4 @@
-import $ from 'jquery';
 import axios from 'axios';
-import when from 'when';
 
 const API_URL = window.location + 'api/todos/';
 
