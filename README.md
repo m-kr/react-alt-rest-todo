@@ -17,7 +17,7 @@ $ mongod
 ```
 If results is some like '*command not found*' then follow with mongoDB installation instruction - [link](https://docs.mongodb.org/manual/installation/)
 
-#### Now install packages and run application, end enjoy it! :)
+##### Now install packages
 
 ```bash
 $ npm install
@@ -31,7 +31,7 @@ $ sudo npm install -g bower
 $ bower install
 ```
 
-## Running
+##### Run application, end enjoy it! :)
 
 ```bash
 $ npm start
