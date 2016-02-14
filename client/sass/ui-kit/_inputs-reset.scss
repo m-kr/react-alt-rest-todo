@@ -1,0 +1,33 @@
+.form-control:disabled {
+	cursor: not-allowed;
+}
+input.form-control, select.form-control {
+	display: inline-block;
+	background: none;
+	border: 2px solid $color__primary;
+	color: $color__text--primary;
+	font-size: 16px;
+	padding: 5px 0;
+	transition: .2s ease;
+
+	&:focus,
+	&:active {
+		outline: none;
+	}
+
+	&[type="text"],
+	&[type="email"],
+	&[type="number"] {
+		border: none;
+		border-bottom: 2px solid $color__primary;
+		&:focus,
+		&:active {
+			box-shadow: 0 2px 2px -2px $color__primary;
+		}
+	}
+
+	&:disabled {
+		box-shadow: none;
+		border-bottom: 1px dotted $color__gray400;
+	}
+}

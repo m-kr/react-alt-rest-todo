@@ -1,0 +1,35 @@
+.input-group {
+	display: inline-block;
+	margin-right: 20px;
+	position: relative;
+
+	input.form-control {
+		padding: 7px;
+
+		&:focus + label,
+		&.has-value + label {
+			top: -7px;
+			font: {
+				size: 10px;
+				weight: 500;
+				style: normal;
+			}
+			color: $color__text--secondary;
+		}
+	}
+
+	label {
+		position: absolute;
+		top: 50%;
+		left: 5px;
+		font: {
+			style: italic;
+			size: 16px;
+		}
+		color: $color__text--hint;
+		transform: translateY(-50%);
+		pointer-events: none;
+		text-shadow: none;
+		transition: 0.3s ease;
+	}
+}

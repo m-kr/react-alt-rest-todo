@@ -1,0 +1,14 @@
+.check-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		display: block;
+		padding: 5px;
+		list-style: none;
+		border-bottom: 1px solid $color__gray400;
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+}

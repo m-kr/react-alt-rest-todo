@@ -1,0 +1,27 @@
+.checkbox, 
+.radio {
+	position: relative;
+	display: block;
+	min-height: 30px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 7px;
+	label {
+		min-height: 23px;
+		padding-left: 25px;
+		margin-bottom: 0;
+		font-weight: normal;
+		cursor: pointer;
+	}
+	input {
+		&:focus,
+		&:active {
+			outline: none;
+		}
+	}
+}
+.radio {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 7px;
+}

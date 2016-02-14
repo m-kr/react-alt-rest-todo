@@ -1,0 +1,111 @@
+@mixin btnAction($backgroundColor, $gradientColor) {
+	background: {
+		color: $backgroundColor;
+		image: radial-gradient(circle, darken($gradientColor, 10) 10%, $gradientColor 11%);
+		repeat: no-repeat;
+		size: 1000%;
+	}
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+@mixin btnType($textColor, $backgroundColor) {
+	color: $textColor;
+	background: {
+		color: $backgroundColor;
+		size: 200%;
+		position: 50%;
+	}
+	&:hover,
+	&:focus {
+		background-color: darken($backgroundColor, 5);
+	}
+}
+
+.btn {
+	display: inline-block;
+	margin-bottom: 0;
+	vertical-align: middle;
+	background-image: none;
+	border: 1px solid transparent;
+	font: {
+		size: 13px;
+		weight: 500;
+	}
+	padding: 6px 16px;
+	line-height: 1.846;
+	border-radius: 2px;
+	cursor: pointer;
+	user-select: none;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+	transition: .3s ease;
+	border: none;
+	white-space: nowrap;
+	text: {
+		align: center;
+		transform: uppercase;
+	}
+
+	&:disabled {
+		opacity: .6;
+		cursor: not-allowed;
+		box-shadow: none;
+		pointer-events: none;
+	}
+
+	&.large {
+		padding: 10px 16px;
+		font-size: 17px;
+		line-height: 1.3333333;
+	}
+	&.small {
+		padding: 5px 10px;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+	&.tiny {
+		padding: 1px 5px;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+
+	&.default {
+		@include btnType($color__text--secondary, $color__white);
+		&:active {
+			@include btnAction(darken($color__white, 5), $color__white);
+		}
+		&:disabled {
+			background-color: rgba(0, 0, 0, 0.1);
+			color: $color__text--hint;
+			opacity: 1;
+		}
+	}
+	&.primary {
+		@include btnType($color__text--light-primary, $color__primary);
+		&:active {
+			@include btnAction($color__white, $color__primary);
+		}
+	}
+	&.success {
+		@include btnType($color__text--light-primary, $color__green);
+		&:active {
+			@include btnAction($color__white, $color__green);
+		}
+	}
+	&.info {
+		@include btnType($color__text--light-primary, $color__purple--deep);
+		&:active {
+			@include btnAction($color__white, $color__purple--deep);
+		}
+	}
+	&.warning {
+		@include btnType($color__text--light-primary, $color__orange);
+		&:active {
+			@include btnAction($color__white, $color__orange);
+		}
+	}
+	&.danger {
+		@include btnType($color__text--light-primary, $color__red);
+		&:active {
+			@include btnAction($color__white, $color__red);
+		}
+	}
+}

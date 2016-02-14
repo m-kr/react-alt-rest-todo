@@ -1,0 +1,21 @@
+select.form-control {
+	border: none;
+	border-bottom: 2px solid $color__primary;
+	&:active {
+		border-bottom-color: transparent;
+	}
+}
+.select-group {
+	display: inline-block;
+
+	label {
+		display: block;
+		font: {
+			style: normal;
+			size: 10px;
+			weight: 500;
+		}
+		color: $color__text--secondary;
+		text-shadow: none;
+	}
+}
