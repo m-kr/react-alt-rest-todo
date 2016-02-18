@@ -23,14 +23,6 @@ If results is some like '*command not found*' then follow with mongoDB installat
 $ npm install
 ```
 
-```bash
-$ sudo npm install -g bower
-```
-
-```bash
-$ bower install
-```
-
 ##### Run application, end enjoy it! :)
 
 ```bash
