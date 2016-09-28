@@ -1,7 +1,7 @@
 ## React todo application, with Alt flux implementation.
 
 Simple todo application, created for give example how Alt flux working with async tasks.
-Application contain:
+Application contains:
 
 - **Alt** flux framework,
 - **React** JS UI building library,
@@ -23,7 +23,7 @@ If results is some like '*command not found*' then follow with mongoDB installat
 $ npm install
 ```
 
-##### Run application, end enjoy it! :)
+##### Run application, and enjoy it! :)
 
 ```bash
 $ npm start
